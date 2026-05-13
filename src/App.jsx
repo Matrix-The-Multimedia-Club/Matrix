@@ -34,8 +34,8 @@ const App = () => {
           </>} />
           <Route path="/about" element={<About />} />
       </Routes>
-      </>
+    </main>
   )
 }
 
-export default App
+export default App;

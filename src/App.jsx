@@ -1,8 +1,11 @@
-import PillNav from './components/PillNav';
+import Hero from "./components/Hero";
+import About from "./components/About";
+import PillNav from "./components/PillNav";
+import { Routes, Route } from 'react-router-dom';
 import logo from '/favicon.ico';
-import Hero from "./components/Hero"
 
 const App = () => {
+
   return (
     <main style={{ minHeight: '100vh', backgroundColor: 'transparent' }}>
       <PillNav
@@ -25,8 +28,13 @@ const App = () => {
         initialLoadAnimation={true}
         className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-fit max-w-[95vw]"
       />
-      <Hero />
-    </main>
+        <Routes>
+          <Route path="/" element={<>
+            <Hero />
+          </>} />
+          <Route path="/about" element={<About />} />
+      </Routes>
+      </>
   )
 }
 

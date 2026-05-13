@@ -1,13 +1,18 @@
+import { useState } from 'react';
 import Hero from "./components/Hero";
 import About from "./components/About";
 import PillNav from "./components/PillNav";
+import SplashScreen from "./components/SplashScreen";
 import { Routes, Route } from 'react-router-dom';
 import logo from '/favicon.ico';
 
 const App = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [showSplash, setShowSplash] = useState(true);
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: 'transparent' }}>
+      <SplashScreen onComplete={() => setShowSplash(false)} />
       <PillNav
         logo={logo}
         logoAlt="Company Logo"

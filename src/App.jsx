@@ -4,7 +4,7 @@ import Hero from "./components/Hero"
 
 const App = () => {
   return (
-    <main style={{ minHeight: '100vh', backgroundColor: '#000' }}>
+    <main style={{ minHeight: '100vh', backgroundColor: 'transparent' }}>
       <PillNav
         logo={logo}
         logoAlt="Company Logo"

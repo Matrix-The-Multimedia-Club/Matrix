@@ -7,8 +7,8 @@ import logo from '/favicon.ico';
 const App = () => {
 
   return (
-      <>
-        <PillNav
+    <main style={{ minHeight: '100vh', backgroundColor: 'transparent' }}>
+      <PillNav
         logo={logo}
         logoAlt="Company Logo"
         items={[

@@ -114,7 +114,7 @@ const Hero = () => {
       <section className="dome-gallery-section">
       <div style={{ width: '100vw', height: '100vh' }}>
         <DomeGallery
-          fit={0.75}
+          fit={1}
           minRadius={650}
           maxVerticalRotationDeg={0}
           segments={34}

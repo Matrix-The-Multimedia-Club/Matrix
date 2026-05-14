@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Hero from "./components/Hero";
 import About from "./components/About";
 import PillNav from "./components/PillNav";
-import SplashScreen from "./components/SplashScreen";
+// import SplashScreen from "./components/SplashScreen";
 import { Routes, Route } from 'react-router-dom';
 import logo from '/favicon.ico';
 
@@ -12,7 +12,7 @@ const App = () => {
 
   return (
     <main style={{ minHeight: '100vh', backgroundColor: 'transparent' }}>
-      <SplashScreen onComplete={() => setShowSplash(false)} />
+      {/* <SplashScreen onComplete={() => setShowSplash(false)} /> */}
       <PillNav
         logo={logo}
         logoAlt="Company Logo"

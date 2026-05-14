@@ -6,6 +6,90 @@
   background: transparent;
 }
 
+.hero-login-btn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 100;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: rgba(7, 13, 33, 0.65);
+  border: 1px solid rgba(75, 233, 255, 0.35);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero-login-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #48d8ff;
+}
+
+.hero-login-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-login-button {
+  background: transparent;
+  color: #d8f4ff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.25s ease;
+}
+
+.hero-login-button:hover {
+  color: #48d8ff;
+}
+
+.hero-social {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 100;
+}
+
+.hero-social-link {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #48d8ff;
+  border: 1px solid rgba(75, 233, 255, 0.35);
+  border-radius: 50%;
+  background: rgba(7, 13, 33, 0.65);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.hero-social-link:hover {
+  color: #ffffff;
+  background: rgba(75, 233, 255, 0.2);
+  border-color: rgba(75, 233, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.hero-social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
 .hero-overlay {
   position: relative;
   width: 100%;
@@ -30,6 +114,11 @@
   -webkit-backdrop-filter: blur(18px);
   color: #eef8ff;
   box-shadow: 0 30px 120px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-brand {
@@ -88,6 +177,7 @@
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2rem;
+  justify-content: flex-end;
 }
 
 .hero-button {
@@ -129,6 +219,10 @@
   color: rgba(239, 247, 255, 0.72);
   font-size: 0.92rem;
   line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .hero-footer strong {
@@ -145,6 +239,102 @@
   font-size: 0.88rem;
 }
 
+.enter-matrix {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  background: transparent;
+  z-index: 10;
+}
+
+.enter-matrix-heading {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  color: #f8fdff;
+  margin: 0 0 2rem;
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.enter-matrix-paragraph {
+  max-width: 720px;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: rgba(237, 248, 255, 0.85);
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.enter-matrix-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.enter-matrix-button {
+  background: rgba(48, 214, 255, 0.18);
+  color: #e8f9ff;
+  border: 1px solid rgba(75, 233, 255, 0.35);
+  padding: 0.95rem 1.9rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.enter-matrix-button:hover {
+  transform: translateY(-1px);
+  background: rgba(62, 213, 255, 0.24);
+  border-color: rgba(146, 249, 255, 0.65);
+}
+
+.glimpse-section {
+  position: relative;
+  width: 100%;
+  min-height: 45vh;
+  padding: 4rem 2rem;
+  background: transparent;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.glimpse-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #f8fdff;
+  margin: 0;
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.glimpse-paragraph {
+  max-width: 760px;
+  margin: 1.2rem auto 0;
+  color: rgba(237, 248, 255, 0.85);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.dome-gallery-section {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  z-index: 10;
+}
+
 @media (max-width: 980px) {
   .hero-overlay {
     justify-content: center;
@@ -155,6 +345,16 @@
     width: 100%;
     max-width: 720px;
     padding: 2rem;
+  }
+
+  .hero-login-btn {
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .hero-social {
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 }
 
@@ -184,5 +384,67 @@
   .hero-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .hero-login-btn {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .hero-login-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .hero-login-button {
+    font-size: 0.9rem;
+  }
+
+  .hero-social {
+    bottom: 1rem;
+    right: 1rem;
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  .hero-social-link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-social-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .enter-matrix {
+    min-height: 50vh;
+    padding: 3rem 1.5rem;
+  }
+
+  .enter-matrix-heading {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .enter-matrix-paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .enter-matrix-button {
+    padding: 0.8rem 1.6rem;
+    font-size: 0.95rem;
+  }
+
+  .glimpse-section {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .glimpse-heading {
+    font-size: 2.2rem;
   }
 }

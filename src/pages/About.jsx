@@ -1,6 +1,6 @@
-import ElectricBorder from "./ElectricBorder";
+import ElectricBorder from "../components/ElectricBorder";
 import { Sparkles, Target, Eye, Heart } from "lucide-react";
-import TeamProfile from './Team';
+import TeamProfile from '../components/Team';
 import { teamMembers, TEAM_ORDER } from '../constant/teamMembers';
 // import TeamProfile from "./Team";
 

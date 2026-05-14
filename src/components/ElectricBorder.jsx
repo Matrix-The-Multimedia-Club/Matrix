@@ -1,5 +1,5 @@
 import { useEffect, useRef, useCallback } from 'react';
-import './ElectricBorder.css';
+import './css/ElectricBorder.css';
 
 const ElectricBorder = ({
   children,

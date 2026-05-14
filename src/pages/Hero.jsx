@@ -1,6 +1,6 @@
 
 import './Hero.css'
-import DomeGallery from './DomeGallery';
+import DomeGallery from '../components/DomeGallery';
 
 const Hero = () => {
   return (

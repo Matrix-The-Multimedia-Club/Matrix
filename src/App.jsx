@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Hero from "./components/Hero";
-import About from "./components/About";
+import Hero from "./pages/Hero";
+import About from "./pages/About";
 import PillNav from "./components/PillNav";
 // import SplashScreen from "./components/SplashScreen";
 import { Routes, Route } from 'react-router-dom';

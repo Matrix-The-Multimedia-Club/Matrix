@@ -12,7 +12,7 @@ const App = () => {
   const [showSplash, setShowSplash] = useState(true);
 
   return (
-   <main style={{ minHeight: '100vh', backgroundColor: 'transparent' }}>
+   <>
   {/* <SplashScreen onComplete={() => setShowSplash(false)} /> */}
   
   <PillNav
@@ -42,9 +42,9 @@ const App = () => {
     {/* Add more routes later */}
   </Routes>
 
-  {/* ✅ ADD FOOTER HERE - At the bottom but inside main */}
+  {/* Footer at the bottom */}
   <Footer />
-</main>
+</>
   )
 }
 

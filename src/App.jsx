@@ -6,6 +6,7 @@ import PillNav from "./components/PillNav";
 import { Routes, Route } from 'react-router-dom';
 import logo from '/favicon.ico';
 import Footer from './components/Footer';
+import Contact from './pages/Contact';
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
@@ -39,7 +40,7 @@ const App = () => {
   <Routes>
     <Route path="/" element={<Hero />} />
     <Route path="/about" element={<About />} />
-    {/* Add more routes later */}
+    <Route path="/contact" element={<Contact />} />
   </Routes>
 
   {/* Footer at the bottom */}

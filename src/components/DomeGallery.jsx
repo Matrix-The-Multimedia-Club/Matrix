@@ -114,7 +114,7 @@ export default function DomeGallery({
   minRadius = 600,
   maxRadius = Infinity,
   padFactor = 0.25,
-  overlayBlurColor = '#120F17',
+  overlayBlurColor = 'transparent',
   maxVerticalRotationDeg = DEFAULTS.maxVerticalRotationDeg,
   dragSensitivity = DEFAULTS.dragSensitivity,
   enlargeTransitionMs = DEFAULTS.enlargeTransitionMs,
@@ -768,10 +768,10 @@ export default function DomeGallery({
         style={{
           ['--segments-x']: segments,
           ['--segments-y']: segments,
-          ['--overlay-blur-color']: overlayBlurColor,
+          // ['--overlay-blur-color']: overlayBlurColor,
           ['--tile-radius']: imageBorderRadius,
           ['--enlarge-radius']: openedImageBorderRadius,
-          ['--image-filter']: grayscale ? 'grayscale(1)' : 'none'
+          // ['--image-filter']: grayscale ? 'grayscale(1)' : 'none'
         }}
       >
         <main
@@ -806,7 +806,7 @@ export default function DomeGallery({
                   }}
                 >
                   <div
-                    className="item__image absolute block overflow-hidden cursor-pointer bg-gray-200 transition-transform duration-300"
+                    className="item__image absolute block overflow-hidden cursor-pointer transition-transform duration-300"
                     role="button"
                     tabIndex={0}
                     aria-label={it.alt || 'Open image'}

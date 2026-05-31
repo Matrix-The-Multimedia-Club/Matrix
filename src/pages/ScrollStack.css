@@ -1,0 +1,20 @@
+.scroll-stack-scroller {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.scroll-stack-inner {
+  padding: 8vh 1rem 140vh;
+  min-height: 100vh;
+}
+
+.scroll-stack-card {
+  background: rgba(7, 13, 33, 0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 28px;
+  padding: 2.8rem 2.6rem;
+  margin-bottom: 160px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+  transform-origin: top center;
+}

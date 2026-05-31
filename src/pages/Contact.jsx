@@ -1,18 +1,35 @@
 const Contact = () => {
   return (
     <div className="relative w-full min-h-screen">
-      {/* Video Background */}
+      {/* Video Background (match Hero layering) */}
       <video
+        src="/blue.mp4"
         autoPlay
-        muted
         loop
-        className="fixed inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="/blue.mp4" type="video/mp4" />
-      </video>
+        muted
+        playsInline
+        style={{
+          position: "fixed",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      />
 
-      {/* Overlay */}
-     <div className="fixed inset-0 bg-gradient-to-b from-black/60 to-black/70 z-[1]" />
+// Overlay (match Hero layering)
+      <div
+        style={{
+          position: "fixed",
+          inset: 0,
+          background: "linear-gradient(rgba(0,0,0,0.16), rgba(0,0,0,0.55))",
+          zIndex: 1,
+          pointerEvents: "none",
+        }}
+      />
 
 
       {/* Content */}

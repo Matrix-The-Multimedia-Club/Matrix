@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import logo from '/favicon.ico';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
+import Events from './pages/Events';
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
@@ -40,6 +41,7 @@ const App = () => {
   <Routes>
     <Route path="/" element={<Hero />} />
     <Route path="/about" element={<About />} />
+    <Route path="/events" element={<Events />} />
     <Route path="/contact" element={<Contact />} />
   </Routes>
 

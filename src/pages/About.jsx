@@ -1,6 +1,7 @@
 import ElectricBorder from "../components/ElectricBorder";
 import { Sparkles, Target, Eye, Heart } from "lucide-react";
 import TeamProfile from '../components/Team';
+import JoinUs from '../components/JoinUs';
 import { teamMembers, TEAM_ORDER } from '../constant/teamMembers';
 // import TeamProfile from "./Team";
 
@@ -139,6 +140,11 @@ const About = () => {
                             Our Team
                         </h2>
                         {renderTeamMembers()}
+                    </div>
+
+                    {/* Join Us Section */}
+                    <div className="mt-32 mb-20">
+                        <JoinUs />
                     </div>
                 </div>
                 <TeamProfile/>

@@ -1,19 +1,27 @@
+import { JOIN_US_CONFIG } from '../constant/joinUsConfig';
+import { useNavigate } from 'react-router-dom';
 
 const TeamProfile = ({ member }) => {
+  const navigate = useNavigate();
+
   if (!member) return null;
 
+  const handleJoinClick = () => {
+    navigate('/recruitment');
+  };
+
   return (
-    <div 
+    <div
       className="relative w-80 rounded-2xl p-8 overflow-hidden bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] text-white text-center transition-transform hover:-translate-y-2 duration-300"
     >
-      
+
       {/* Subtle glowing orb behind profile picture for a cinematic depth */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-40"></div>
 
       {/* Profile Image (Ensure the face remains clearly identifiable here) */}
-      <img 
-        src={member.image || "https://via.placeholder.com/150"} 
-        alt={member.name} 
+      <img
+        src={member.image || "https://via.placeholder.com/150"}
+        alt={member.name}
         className="relative w-28 h-28 mx-auto rounded-full object-cover border-2 border-white/50 shadow-[0_0_15px_rgba(59,130,246,0.6)] mb-4"
         onError={(e) => {
           e.target.src = 'https://via.placeholder.com/150?text=' + (member.name ? member.name.charAt(0) : 'M');
@@ -26,7 +34,7 @@ const TeamProfile = ({ member }) => {
       <p className="text-xs text-gray-300 mt-2 mb-6">{member.bio}</p>
 
       {/* Social CTA Buttons */}
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-4 mb-6">
         {/* LinkedIn */}
         {member.linkedin && (
           <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-white/5 hover:bg-blue-500/20 border border-white/10 transition-colors" aria-label="LinkedIn" title="LinkedIn">
@@ -52,6 +60,14 @@ const TeamProfile = ({ member }) => {
           </a>
         )}
       </div>
+
+      {/* Join Us Button */}
+      <button
+        onClick={handleJoinClick}
+        className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]"
+      >
+        Join Us
+      </button>
     </div>
   );
 };

@@ -8,6 +8,7 @@ import logo from '/favicon.ico';
 import Footer from './components/Footer';
 import Contact from './pages/Contact';
 import Events from './pages/Events';
+import Recruitment from './pages/Recruitment';
 
 const App = () => {
   // eslint-disable-next-line no-unused-vars
@@ -42,6 +43,7 @@ const App = () => {
     <Route path="/" element={<Hero />} />
     <Route path="/about" element={<About />} />
     <Route path="/events" element={<Events />} />
+    <Route path="/recruitment" element={<Recruitment />} />
     <Route path="/contact" element={<Contact />} />
   </Routes>
 

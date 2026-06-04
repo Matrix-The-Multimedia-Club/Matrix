@@ -162,7 +162,7 @@ const Events = () => {
           <h2 className="events-section-title">All Events Conducted</h2>
           <p className="events-section-sub">Journey through every memorable event hosted by the Matrix Club.</p>
         </div>
-        <ScrollStack className="events-scroll-stack" itemDistance={160} rotationAmount={8} blurAmount={0.8}>
+        <ScrollStack className="events-scroll-stack" itemDistance={160} rotationAmount={0} blurAmount={0.8} useWindowScroll={true}>
           {allPastEvents.map((event) => (
             <ScrollStackItem key={event.id}>
               <div className="past-event-card">

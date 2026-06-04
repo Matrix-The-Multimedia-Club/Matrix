@@ -36,7 +36,7 @@ const DEFAULTS = {
   maxVerticalRotationDeg: 5,
   dragSensitivity: 20,
   enlargeTransitionMs: 300,
-  segments: 35
+  segments: 40
 };
 
 const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
@@ -144,7 +144,7 @@ export default function DomeGallery({
   const inertiaRAF = useRef(null);
   const pointerTypeRef = useRef('mouse');
   const tapTargetRef = useRef(null);
-  const openingRef = useRef(false);
+  const openingRef = useRef(true);
   const openStartedAtRef = useRef(0);
   const lastDragEndAt = useRef(0);
 
@@ -310,6 +310,7 @@ export default function DomeGallery({
         if (pointerTypeRef.current === 'touch') event.preventDefault();
         if (pointerTypeRef.current === 'touch') lockScroll();
         draggingRef.current = true;
+        if (sphereRef.current) sphereRef.current.classList.add('dragging');
         cancelTapRef.current = false;
         movedRef.current = false;
         startRotRef.current = { ...rotationRef.current };
@@ -345,6 +346,7 @@ export default function DomeGallery({
 
         if (last) {
           draggingRef.current = false;
+          if (sphereRef.current) sphereRef.current.classList.remove('dragging');
           let isTap = false;
 
           if (startPosRef.current) {
@@ -667,6 +669,15 @@ export default function DomeGallery({
   }, []);
 
   const cssStyles = `
+    @keyframes autoRotate {
+      from {
+        transform: translateZ(calc(var(--radius) * -1)) rotateX(0deg) rotateY(0deg);
+      }
+      to {
+        transform: translateZ(calc(var(--radius) * -1)) rotateX(0deg) rotateY(360deg);
+      }
+    }
+
     .sphere-root {
       --radius: 520px;
       --viewer-pad: 72px;
@@ -676,12 +687,12 @@ export default function DomeGallery({
       --item-width: calc(var(--circ) / var(--segments-x));
       --item-height: calc(var(--circ) / var(--segments-y));
     }
-    
+
     .sphere-root * {
       box-sizing: border-box;
     }
     .sphere, .sphere-item, .item__image { transform-style: preserve-3d; }
-    
+
     .stage {
       width: 100%;
       height: 100%;
@@ -693,11 +704,16 @@ export default function DomeGallery({
       perspective: calc(var(--radius) * 2);
       perspective-origin: 50% 50%;
     }
-    
+
     .sphere {
       transform: translateZ(calc(var(--radius) * -1));
       will-change: transform;
       position: absolute;
+      animation: autoRotate 120s linear infinite;
+    }
+
+    .sphere.dragging {
+      animation: none;
     }
     
     .sphere-item {
@@ -776,7 +792,7 @@ export default function DomeGallery({
       >
         <main
           ref={mainRef}
-          className="absolute inset-0 grid place-items-center overflow-hidden select-none bg-transparent"
+          className="absolute inset-0 grid place-items-center select-none bg-transparent"
           style={{
             touchAction: 'none',
             WebkitUserSelect: 'none'
